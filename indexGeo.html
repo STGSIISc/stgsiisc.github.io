@@ -30,7 +30,7 @@
 
          
          <h1 style="position: absolute;
-               left: 72px;"> 
+               left: 72px; top: 0px;"> 
                
                <h11>
                   STGS Geometry Module
@@ -84,14 +84,14 @@
       
 	  <thead>
 	  
-	  <tr style="border-bottom:2px solid white;">
-        <th style="width:50px;"></th>
-		<th>Date </th>
-        <th>Title</th>
-        <th>Speaker</th>
-        <th>Keywords</th>
+	  <tr style="border-bottom:2px solid black;">
+        <th style="width:50px; padding-bottom: 20px;"></th>
+		<th style="padding-bottom: 20px;">Date </th>
+        <th style="padding-bottom: 20px;">Title</th>
+        <th style="padding-bottom: 20px;">Speaker</th>
+        <th style="padding-bottom: 20px;">Keywords</th>
       </tr>
-	  
+	 
 	  </thead>
 	  
 	  <tbody>
@@ -779,7 +779,7 @@ margin-top:110px;
   left: 0;
  height: 20px;
   width: 100%;
- border-bottom: 5px solid #00d7c3;
+ border-bottom: 5px solid white;
   padding: 20px 10px 70px 10px;
 }
 
@@ -792,6 +792,7 @@ margin-top:110px;
   position: fixed;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .sticky + .content {
@@ -1139,7 +1140,7 @@ th{
  border: solid 0px white;
   background-color: transparent;
   text-align: center;
-  color: #00d7c3;
+  color: white;
   font-size: 20px;
 }
 
@@ -1161,7 +1162,8 @@ tr {
 thead {
   position: sticky;
   top: 115px;
-  background: black;
+  background: -webkit-linear-gradient(#fff, #000);
+  z-index: 1;
 }
 
 
