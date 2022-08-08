@@ -1,33 +1,6 @@
 <style>html, body {margin: 0; height: 100%; overflow: hidden}</style>
-<!---Latest Mathjax LaTex support--->
-
-<script>
-  MathJax = {
-    tex: {
-      inlineMath: [['$', '$']]
-    }
-  };
-</script>
-  <script type="text/javascript" id="MathJax-script" async
-  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
-</script>
-
-<!---Latest Mathjax LaTex support--->
 
 
-<!--- GoTop Button jquery, should always be at the top--->
-
-
-	<!-- Stylesheets -->
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css' />
-    <!-- Scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-	<!--[if lt IE 9]>
-		<script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-<!--- GoTop Button jquery, should always be at the top--->
 
 
 <style>
@@ -89,9 +62,18 @@
 
 
 
+<div style="color: white;
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-150%);
+  padding: 7px 0;
+  font-size: 2.5em;
+  color:grey;
+  font-family: 'Crimson Text', serif;">For any query, please mail us at </div>
 
-
-<p> <I style="color:grey;font-family: 'Crimson Text', serif;">For any query, please mail us at </I><br/> 
+<p> 
   <TT><span>
     
   </span></TT>
@@ -104,6 +86,8 @@
   box-sizing: border-box;
 }
 
+
+q{}
 
 
 p {
@@ -149,10 +133,10 @@ span {
 textArr = [
   "top",
   'geo',
-  'seminar',
+  'seminars',
   'iisc',
   '@gmail.com',
-  'topgeoseminariisc@gmail.com'
+  'topgeoseminarsiisc@gmail.com'
 ]
 
 span = document.getElementsByTagName("span")[0];
@@ -213,12 +197,6 @@ emptySpan(); </script>
 
 
 
-<!---Positioning of GoTop button--->
-<footer>
-	<a id="GoTop" href="#" class="go-top"></a>
-</footer>
-
-<!---Positioning of GoTop button--->
 
 
 
@@ -243,7 +221,7 @@ emptySpan(); </script>
 
 
 
-<!----For sticky header, body of homepage, scrollbar---->
+<!----For body of homepage, scrollbar---->
 
 <style>
 
@@ -266,21 +244,7 @@ body {
   overflow-y: auto;
 }
 
-.header {
-  background: black;
-  background-image: url('background_geometry.svg');
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container*/
-  position: fixed;
-  top: 0;
-  right: 0px;
-  left: 0;
-  height: 20px;
-  width: 100%;
-  border-bottom: 5px solid black;
-  padding: 20px 10px 70px 10px;
-  z-index:1;
-}
+
 
 ::-webkit-scrollbar {
 display:none;
@@ -288,100 +252,7 @@ display:none;
 
 </style>
 
-<!----For sticky header, body of homepage, scrollbar---->
-
-
-
-<!----Animation of homepage name---->
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-
-
-h11 {
-
-  
-/*  color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  font-family: 'Rampart One', cursive;
- 
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
-}
-
-body {
-  
-}
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  }
-}
-
-</style>
-
-<!----Animation of homepage name---->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<!----For body of homepage, scrollbar---->
 
 
 <!--- to give position homepage button--->
@@ -452,203 +323,6 @@ border: 2px solid black;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---Style for tables--->
-
-<style>
-table {
-  table-layout: auto;
-  width:100%;
-  margin:0;
-  border-collapse: collapse;
-  border: 0px solid white;
- }
-
-th{
-  padding: .5em 1em .5em 1em;
-  word-break:keep-all;
-  border: solid 0px white;
-  background-color: transparent;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-
-
-td,
-tr {
-  padding: .5em 1em .5em 1em;
-  word-break:keep-all;
-  font: 110%/1.4 system-ui;
-  border: solid 0px white;
-  background-color: transparent;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-
-thead {
-  position: sticky;
-  top: 115px;
-  background: -webkit-linear-gradient(#fff, #000);
-  z-index: 1;
-}
-
-</style>
-
-<!---Style for tables--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---Animation on clicking the each title--->
-
-<style>a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;right: 20px;
-    font-family: 'Prompt', sans-serif;
-    text-decoration: none;
-	}
-	
-	
-.button {
-  background-color: transparent;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-  color: white;
-}
-
-
-.button:hover {
-  box-shadow: 0 0 0px 0 #fff inset, 0px 0px 15px 15px #fff;
-  
-}</style>
-
-<!---Animation on clicking the each title--->
-
-
-
-<!--- Go Top Button--->
-
-
-<style>
-
-
-/* https://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-.go-top {
-	position: fixed;
-	bottom: .1em;
-    right:.1em;
-    text-decoration: none;
-	color: yellow;
-	background-color: black;
-	font-size: 15px;
-	padding: 1em;
-	display: none;
-}
-
-.go-top:hover {
-	background-color: rgba(0, 0, 0, 0.6);
-	text-decoration: none;
-} 
-
-
-</style>
-
-
-
-
-<script>
-
-   $(document).ready(function() {
-			// Show or hide the sticky footer button
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 200) {
-					$('.go-top').fadeIn(200);
-				} else {
-					$('.go-top').fadeOut(200);
-				}
-			});
-			
-			// Animate the scroll to top
-			$('.go-top').click(function(event) {
-				event.preventDefault();
-				
-				$('html, body').animate({scrollTop: 0}, 300);
-			})
-		}); 
-</script>
-
-<!--- Go Top Button--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <!--- Lodaing later--->
 <!---Homepage, Date, Title, Speaker, KeyWords, Go Top--->
 <script>
@@ -659,320 +333,3 @@ document.getElementById("STGSGM").innerHTML = 'Contact STGS Group';
 document.getElementById("Home").innerHTML = 'Homepage';
 </script>
 
-<script>
-document.getElementById("Date").innerHTML = 'Date';
-</script>
-
-<script>
-document.getElementById("Title").innerHTML = 'Title';
-</script>
-
-<script>
-document.getElementById("Speaker").innerHTML = 'Speaker';
-</script>
-
-<script>
-document.getElementById("Keywords").innerHTML = 'Keywords';
-</script>
-
-<script>
-document.getElementById("GoTop").innerHTML = 'Go Top';
-</script>
-
-
-<!---Talk 1--->
-<script>
-document.getElementById("T1T").innerHTML = 'K$\\ddot{\\text{a}}$hler Geometry $1$';
-document.getElementById("T1S").innerHTML = 'Rajas Sandeep Sompurkar';
-document.getElementById("T1DT").innerHTML = '17<sup>th</sup>';
-document.getElementById("T1K").innerHTML = 'Complex geometry, K$\\ddot{\\text{a}}$hler geometry';
-</script>
-
-		
-	
-
-
-
-
-<!---Talk 2--->
-<script>
-document.getElementById("T2T").innerHTML = 'K$\\ddot{\\text{a}}$hler Geometry 2';
-document.getElementById("T2S").innerHTML = 'Sivaram P';
-document.getElementById("T2DT").innerHTML = '24<sup>th</sup>';
-document.getElementById("T2K").innerHTML = 'Connection on Holomorphic Vector Bundle, Chern connection';
-</script>
-
-
-
-<!---Talk 3--->
-<script>
-document.getElementById("T3T").innerHTML = 'K$\\ddot{\\text{a}}$hler Geometry 3';
-document.getElementById("T3S").innerHTML = 'Sivaram P';
-document.getElementById("T3DT").innerHTML = '31<sup>st</sup>';
-document.getElementById("T3K").innerHTML = 'Complex geometry, K$\\ddot{\\text{a}}$hler geometry';
-</script>
-
-
-<script>
-document.getElementById("01/22").innerHTML = 'Jan<sup>22</sup>';
-</script>
-
-
-<!---January completed--->
-
-
-
-<!---Talk 4--->
-<script>
-document.getElementById("T4T").innerHTML = 'K$\\ddot{\\text{a}}$hler Geometry 4';
-document.getElementById("T4S").innerHTML = 'Sivaram P';
-document.getElementById("T4DT").innerHTML = '07<sup>th</sup>';
-document.getElementById("T4K").innerHTML = 'Complex geometry, K$\\ddot{\\text{a}}$hler geometry';
-</script>
-
-
-
-<!---Talk 5--->
-<script>
-document.getElementById("T5T").innerHTML = "H$\\ddot{\\text{o}}$rmander's Theorem on the solution of the $\\bar{\\partial}$ equation with $L^2$ estimates";
-document.getElementById("T5S").innerHTML = 'Arindam Mandal';
-document.getElementById("T5DT").innerHTML = '14<sup>th</sup>';
-document.getElementById("T5K").innerHTML = '$\\bar{\\partial}$ equation, Distribution theory, Unbounded operators';
-</script>
-
-
-<!---Talk 6--->
-<script>
-document.getElementById("T6T").innerHTML = "H$\\ddot{\\text{o}}$rmander's Theorem on the solution of the $\\bar{\\partial}$ equation with $L^2$ estimates";
-document.getElementById("T6S").innerHTML = 'Arindam Mandal';
-document.getElementById("T6DT").innerHTML = '21<sup>st</sup>';
-document.getElementById("T6K").innerHTML = 'Functional Analysis Lemma, Hilbert Space adjoint, Formal adjoint';
-</script>
-
-
-<!---Talk 7--->
-<script>
-document.getElementById("T7T").innerHTML = "H$\\ddot{\\text{o}}$rmander's Theorem on the solution of the $\\bar{\\partial}$ equation with $L^2$ estimates";
-document.getElementById("T7S").innerHTML = 'Arindam Mandal';
-document.getElementById("T7DT").innerHTML = '28<sup>th</sup>';
-document.getElementById("T7K").innerHTML = 'Bochner-Kodaira Identity';
-</script>
-
-
-<script>
-document.getElementById("02/22").innerHTML = 'Feb<sup>22</sup>';
-</script>
-
-<!---Feb completed--->
-
-
-
-
-<!---Talk 8--->
-<script>
-document.getElementById("T8T").innerHTML = "H$\\ddot{\\text{o}}$rmander's theorem with $L^2$ estimates on a compact K$\\ddot{\\text{a}}$hler manifold";
-document.getElementById("T8S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T8DT").innerHTML = '07<sup>th</sup>';
-document.getElementById("T8K").innerHTML = '$\\bar{\\partial}$ operators and their adjoints';
-</script>
-
-<!---Missing--->
-
-
-<script>
-document.getElementById("T9T").innerHTML = "H$\\ddot{\\text{o}}$rmander's theorem with $L^2$ estimates on a compact K$\\ddot{\\text{a}}$hler manifold";
-document.getElementById("T9S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T9DT").innerHTML = '21<sup>st</sup>';
-document.getElementById("T9K").innerHTML = 'Bochner-Kodaira Identity';
-</script>
-
-
-
-<script>
-document.getElementById("T10T").innerHTML = 'Chern-Weil Theory';
-document.getElementById("T10S").innerHTML = 'Anantadulal Paul';
-document.getElementById("T10DT").innerHTML = '28<sup>th</sup>';
-document.getElementById("T10K").innerHTML = 'Characteristic classes, Chern Character, Gauss-Bonnet theorem';
-</script>
-
-<script>
-document.getElementById("03/22").innerHTML = 'Mar<sup>22</sup>';
-</script>
-<!---March completed--->
-
-<script>
-document.getElementById("T11T").innerHTML = 'Image of Chern character map';
-document.getElementById("T11S").innerHTML = 'Anantadulal Paul';
-document.getElementById("T11DT").innerHTML = '04<sup>th</sup>';
-document.getElementById("T11K").innerHTML = 'Chern character map, Exact forms';
-</script>
-
-
-
-
-<script>
-document.getElementById("T12T").innerHTML = 'PDEs on Manifolds';
-document.getElementById("T12S").innerHTML = 'Gobinda Sau';
-document.getElementById("T12DT").innerHTML = '11<sup>th</sup>';
-document.getElementById("T12K").innerHTML = 'Vector bundles, Sections of vector bundle, Connections';
-</script>
-
-
-<!---Missing--->
-
-<script>
-document.getElementById("T13T").innerHTML = 'Chern character map in complex setting';
-document.getElementById("T13S").innerHTML = 'Anantadulal Paul';
-document.getElementById("T13DT").innerHTML = '25<sup>th</sup>';
-document.getElementById("T13K").innerHTML = 'Chern Character map, $\\partial\\bar{\\partial}$ exact forms';
-</script>
-
-
-
-<script>
-document.getElementById("04/22").innerHTML = 'Apr<sup>22</sup>';
-</script>
-<!---April completed--->
-
-
-
-<script>
-document.getElementById("T14T").innerHTML = 'Mabuchi Functional';
-document.getElementById("T14S").innerHTML = 'Sivaram P';
-document.getElementById("T14DT").innerHTML = '23<sup>rd</sup>';
-document.getElementById("T14K").innerHTML = 'cscK Metric';
-</script>
-
-
-<!---Missing--->
-
-<!---Missing--->
-
-
-<script>
-document.getElementById("T15T").innerHTML = 'Futaki Invariant and Localisation formula for it';
-document.getElementById("T15S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T15DT").innerHTML = '30<sup>th</sup>';
-document.getElementById("T15K").innerHTML = 'KE/cscK metric, Futaki invariant, Localisation formula';
-</script>
-
-
-
-<script>
-document.getElementById("05/22").innerHTML = 'May<sup>22</sup>';
-</script>
-<!---May completed--->
-
-
-
-<script>
-document.getElementById("T16T").innerHTML = 'Futaki Invariant and Localisation formula for it';
-document.getElementById("T16S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T16DT").innerHTML = '06<sup>th</sup>';
-document.getElementById("T16K").innerHTML = 'Blow-Up of a manifold, K-stability';
-</script>
-
-
-
-
-
-<script>
-document.getElementById("T17T").innerHTML = 'Toric Varieties';
-document.getElementById("T17S").innerHTML = 'Adithya Upadhaya';
-document.getElementById("T17DT").innerHTML = '13<sup>th</sup>';
-document.getElementById("T17K").innerHTML = 'Affine/Projective/General Toric varieties, Normal toric varieties';
-</script>
-
-
-
-
-<script>
-document.getElementById("T18T").innerHTML = 'Toric Varieties';
-document.getElementById("T18S").innerHTML = 'Adithya Upadhaya';
-document.getElementById("T18DT").innerHTML = '20<sup>th</sup>';
-document.getElementById("T18K").innerHTML = 'Fans, Orbit-Cone correspondence';
-</script>
-
-
-
-
-
-<script>
-document.getElementById("T19T").innerHTML = 'Toric Varieties';
-document.getElementById("T19S").innerHTML = 'Adithya Upadhaya';
-document.getElementById("T19DT").innerHTML = '23<sup>rd</sup>';
-document.getElementById("T19K").innerHTML = 'Orbit-Cone Correspondence';
-</script>
-
-
-
-
-<script>
-document.getElementById("T20T").innerHTML = 'Toric Varieties';
-document.getElementById("T20S").innerHTML = 'Adithya Upadhaya';
-document.getElementById("T20DT").innerHTML = '27<sup>th</sup>';
-document.getElementById("T20K").innerHTML = 'Compactness of Toric varieties';
-</script>
-
-
-<script>
-document.getElementById("06/22").innerHTML = 'June<sup>22</sup>';
-</script>
-<!---one extra row is needed for June--->
-
-
-
-<!---June completed--->
-
-
-
-
-
-
-
-<script>
-document.getElementById("T21T").innerHTML = 'Lectures On K-stability';
-document.getElementById("T21S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T21DT").innerHTML = '04<sup>th</sup>';
-document.getElementById("T21K").innerHTML = 'Moment map, symplectic/algebraic quotient construction, Geometric invariant theory, stable/semi-stable/poly-stable points, Hilbert-Mumford criterion';
-</script>
-
-
-
-
-
-<script>
-document.getElementById("T22T").innerHTML = 'Lectures On K-stability';
-document.getElementById("T22S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T22DT").innerHTML = '11<sup>th</sup>';
-document.getElementById("T22K").innerHTML = 'Moment map, Scalar curvature, Hilbert polynomials, Flat limits';
-</script>
-
-
-
-
-
-<script>
-document.getElementById("T23T").innerHTML = 'Lectures On K-stability';
-document.getElementById("T23S").innerHTML = 'Kartick Ghosh';
-document.getElementById("T23DT").innerHTML = '18<sup>th</sup>';
-document.getElementById("T23K").innerHTML = 'Test configuration, Donaldson-Futaki invariant, K-stability';
-</script>
-
-
-
-
-<script>
-document.getElementById("T24T").innerHTML = 'Heat kernel and Parabolic maximum Principle';
-document.getElementById("T24S").innerHTML = 'Gobinda Sau';
-document.getElementById("T24DT").innerHTML = '25<sup>th</sup>';
-document.getElementById("T24K").innerHTML = 'Heat Kernel, Parabolic Maximum Principle';
-</script>
-
-
-
-<script>
-document.getElementById("07/22").innerHTML = 'July<sup>22</sup>';
-</script>
-
-<!----July Completed---->
