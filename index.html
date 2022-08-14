@@ -81,7 +81,7 @@
      <p style="line-height:7px;"><br/>
 	 
          <ul class="menu cf">
-                        <li class="nav-item"><a id="RecentTalks" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a>
+                        <li class="nav-item"><a id="RecentTalks" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif; color: #00d7c3;"></a>
 						
 						      <ul class="submenu">
                                  <li><a id="demo4" href="https://stgsiisc.github.io/topology/25.html" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a></li>
@@ -93,7 +93,7 @@
 						</li>
                         
 						
-						<li class="nav-item"><a id="OldTalks" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a>  
+						<li class="nav-item"><a id="OldTalks" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif; color: #00d7c3;"></a>  
 						
 						
 						<ul class="submenu">
@@ -104,14 +104,14 @@
 	
 	                   </li>
                         
-						<li class="nav-item"><a id="About" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a>
+						<li class="nav-item"><a id="About" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif; color: #00d7c3;"></a>
 						    <ul class="submenu">
                                 <li><a id="demoSTGS" href="https://stgsiisc.github.io/stgs.html" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a> </li>
                                  <li><a id="demoWEBSITE" href="https://stgsiisc.github.io/website.html" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a></li>
                             </ul>
 						</li>
                         
-                        <li class="nav-item"><a id="Contact" class="nav-link" href="https://stgsiisc.github.io/contact.html" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif;"></a></li>
+                        <li class="nav-item"><a id="Contact" class="nav-link" href="https://stgsiisc.github.io/contact.html" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif; color: #00d7c3;"></a></li>
          </ul>
      </p>
 	
@@ -130,6 +130,7 @@
    <span style="--i:5;  font-style: normal; text-color:white;">e</span>
    <span style="--i:6;  font-style: normal; text-color:white;">n</span>
    <span style="--i:7;  font-style: normal; text-color:white;">t</span>
+   <span style="--i:8;  font-style: normal; text-color:white;">s'</span>
   </div>
 </div>
 <!---Animation on the word STUDENT---->
@@ -223,7 +224,9 @@
                <span style="--i:4">i</span>
                <span style="--i:5">n</span>
                <span style="--i:6">a</span>
-               <span style="--i:7">r</span></div>
+               <span style="--i:7">r</span>
+			   <span style="--i:8">s</span>
+			   </div>
      </div> 
 <!---Animation on SEMINAR--->	
 
@@ -273,8 +276,8 @@ body {
 	--blend-color-1: transparent;
 	--blend-color-2: transparent;
 	--blend-color-3: transparent;
-	--blend-color-4: white;
-	--blend-color-5: white;
+	--blend-color-4: rgba(255,255,255,.1);
+	--blend-color-5: rgba(255,255,255,.1);
 }
 
 
@@ -735,8 +738,9 @@ body {
 spanR {
   display: inline-block;
   text-shadow: 0 0 0 whitesmoke;
-  -webkit-animation: smokyR 15s 10s infinite;
-          animation: smokyR 15s 10s infinite;
+  -webkit-animation: smokyR 20s 15s infinite;
+          animation: smokyR 20s 15s infinite;
+	animation-direction: reverse;
 }
 
 spanR:nth-child(even) {
@@ -905,8 +909,9 @@ spanR:nth-of-type(21) {
 span2 {
   display: inline-block;
   text-shadow: 0 0 0 whitesmoke;
-  -webkit-animation: smoky 15s 10s infinite;
-          animation: smoky 15s 10s infinite;
+  -webkit-animation: smoky 20s 15s infinite;
+          animation: smoky 20s 15s infinite;
+	animation-direction:reverse;
 }
 
 span2:nth-child(even) {
@@ -1161,7 +1166,7 @@ transform:  translateX( 53px);
 }
 
 .menu > li {
-  background: -webkit-linear-gradient(#fff, #000);
+  background: transparent;
   float: left;
   position: relative;
   transform: skewX(25deg);
@@ -1197,7 +1202,7 @@ transform:  translateX( 53px);
 }
 
 .submenu li {
-  background-color: rgba(255,255,255,.5);
+  background: -webkit-linear-gradient(#fff, #000);
   position: relative;
   overflow: hidden;		
 }						
@@ -1290,7 +1295,7 @@ document.getElementById("demoG").innerHTML = "Geometry";
 
 
 document.getElementById("About").innerHTML = "About";
-document.getElementById("demoSTGS").innerHTML = "Seminar";
+document.getElementById("demoSTGS").innerHTML = "Seminars";
 document.getElementById("demoWEBSITE").innerHTML = "Website";
 
 

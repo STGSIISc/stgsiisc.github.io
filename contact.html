@@ -48,7 +48,7 @@
   font-size: 55px;
   color: white;">
   
-                <a id="Home" href="https://stgsiisc.github.io/"                      class="button1"></a>
+                <a href="https://stgsiisc.github.io/"                      class="button1"></a>
            
          </div>
   
@@ -280,29 +280,29 @@ display:none;
 <!---homepage button animation--->
 
 <style>
-
 .button1 {
-  -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-border: 2px solid black;
-  right: 20px;
+ -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  height:50px;
+  width:50px;
   font-family: 'Prompt', sans-serif;
-  background: black;
+  border: none;
+  background-image: url('homeicon.svg');
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
   color: white;
   padding: 10px 20px;
   border-radius: 50px;
   font-size: 22px;
-  box-shadow: 0px 0px 60px 10px rgba(255, 255, 255, 0.9);
   text-decoration: none;
-  
 }
 
 .button1:hover {
-  box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
-  border: 3px solid #00d7c3;
+  box-shadow: 0px 0px 60px 10px rgba(255, 255, 255, 0.9);
+  border: 3px solid black;
 }
-
 </style>
 
 <!---homepage button animation--->
@@ -318,6 +318,9 @@ border: 2px solid black;
 document.getElementById("STGSGM").innerHTML = 'Contact STGS Group';
 </script>
 
+
+<!---
 <script>
 document.getElementById("Home").innerHTML = 'Homepage';
 </script>
+--->
