@@ -51,7 +51,7 @@
 <!---This appear and disapper animation on IISc Bangalore--->
 
 <!-- Where and how to write IISc Bangalore-->
-<div class="anim-object anim-smallcar appeardisappear" ><div class="topleft">IISc Bangalore </div> </div>
+<div class="anim-object anim-smallcar appeardisappear" ><div class="topleft"><a id="IISc"></a></div> </div>
 
 <style>
 
@@ -79,9 +79,9 @@
 
 
 <!---This is draggable dropdown menu--->
- <div id="drag" style="z-index: 4; top:-16px"> 
+ <div id="drag" style="z-index: 4;"> 
  
-     <p style="line-height:7px;"><br/>
+     <p style="line-height:0px;"><br/>
 	 
          <ul class="menu cf">
                         <li class="nav-item"><a id="RecentTalks" class="nav-link" style="font-size:17px; padding: 15px 10px; font-family: 'Poppins', sans-serif; color: #00d7c3;"></a>
@@ -215,7 +215,7 @@
 <!---Glitch on fullscreen--->
 
 <!---Animation on TOPOLOGY & GEOMETRY--->	
-	<h1 class="title">TOPOLOGY & GEOMETRY</h1>
+	<h1 class="title"><a id="TopGeo"></a></h1>
 <!---Animation on TOPOLOGY & GEOMETRY--->	
 
 <!---Animation on SEMINAR--->	
@@ -1292,6 +1292,10 @@ document.getElementById("demo3").innerHTML = "5<sup>th</sup> Aug";
 document.getElementById("demo2").innerHTML = "1<sup>st</sup> Aug";
 document.getElementById("demo1").innerHTML = "18<sup>th</sup> July";
 
+
+document.getElementById("IISc").innerHTML = "IISc Bangalore";
+document.getElementById("TopGeo").innerHTML = "Topology & Geometry";
+
 document.getElementById("OldTalks").innerHTML = "Old Talks";
 document.getElementById("demoT").innerHTML = "Topology";
 document.getElementById("demoG").innerHTML = "Geometry";
@@ -1315,13 +1319,14 @@ document.getElementById("Contact").innerHTML = "Contact";
     
     <style>
         #drag {
-            background-color: trasparent;
+            background-color: transparent;
             height: 120px;
             width: 520px;
             text-align:center;
             position: left;
-			
-        }
+			top:0px;
+			position:absolute;
+		 }
     </style>
 	
 	<script>
