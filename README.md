@@ -1,7 +1,7 @@
 # stgsiisc.github.io
 
 
-Hi, I am Sumanta, a student of the IISc Mathematics Department interested in topology. I designed/developed our non-commercial, non-profitable website https://stgsiisc.github.io/. Also, I am currently maintaining this website. You can mail me on <a href="mailto:sumantad030@gmail.com">sumantad030@gmail.com</a> <br/> <br/>
+Hi, I am Sumanta, a student of the IISc Mathematics Department interested in topology. I designed/developed our non-commercial, non-profitable website https://stgsiisc.github.io/. Also, I am currently maintaining this website. You can mail me at <a href="mailto:sumantad030@gmail.com">sumantad030@gmail.com</a> <br/> <br/>
 
 
 
