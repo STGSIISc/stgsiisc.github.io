@@ -1,5 +1,5 @@
 <meta charset="UTF-8"/>
-<title>27th Talk (Topology)</title>
+<title>28th Talk (Topology)</title>
 <!---Latest Mathjax LaTex support--->
 <script>
   MathJax = {
@@ -62,7 +62,7 @@
 		<td style="width:95px; color:#ffff80;  padding: 20px 20px 20px 20px;">Title</td>
         
 		<td style="text-align:left;border-left: 2px solid white; padding: 20px 20px 20px 20px; font-family: 'EB Garamond', serif;line-height:150%; font-size: 25px"colspan="2">
-		<I>Dehn-Nielsen-Epstein-Baer Theorem (part 2)</I>
+		<I>Dehn-Nielsen-Epstein-Baer Theorem (part 3)</I>
 		</td>		  
     </tr> 
 </table>
@@ -79,7 +79,7 @@
     
       <tr style="border-bottom: 2px solid white;">
 	     <td style="text-align:center; border-right: 2px solid white;   font-family: 'EB Garamond', serif; overflow:auto; line-height:150%; font-size: 25px; padding: 20px 20px 20px 20px;" >
-		      19/08/2022 (Friday)
+		      26/08/2022 (Friday)
 		 </td>
 	     <td style="text-align:center;    font-family: 'EB Garamond', serif; overflow:auto;border-bottom: 0px solid white;line-height:150%; font-size: 25px; border-right: 2px solid white; padding: 20px 20px 20px 20px;"> 
 		      Sumanta Das
@@ -129,22 +129,33 @@
 				
 				
 				<div id="NamesTable" class="TableBody" style="display:none; text-align:left;">
-				        The last time we proved that, for $g\geq 1$, there is a canonical isomorphism
- 
-                         $$\text{MCG}^\pm (\Sigma_g)\to \text{Out}\big(\pi_1(\Sigma_g)\big),$$
+				        
+						Last time, we started proving the fact that every $g$-genus surface is topologically rigid where $g\geq 2$. The first two steps are given below: <br/><br/>
 
-                         under the assumption that closed orientable surfaces are topologically rigid, i.e., every homotopy equivalence between two closed orientable connected surfaces is homotopic to a homeomorphism. <br/>
-                         <center>Today we will start proving the topological rigidity of closed orientable surfaces.</center>
+						1. Decompose $S_g$ into pair of pants using a finite collection $\mathscr P$ of a smoothly embedded simple closed curves, then homotope homotopy equivalence $f\colon S_g\to S_g$ to make it smooth as well as transverse to $\mathscr P$. <br/>
 
+						2. Thus, $f^{-1}(\mathscr P)$ is a finite collection of smoothly embedded closed curves in $S_g$; some of these curves may bound disks in $S_g$, and others represent primitive elements of $\pi_1(S_g)$; next, we homotope $f$ to remove all disk-bounding components of $f^{-1}(\mathscr P)$. 
+						
+						 <br/> <br/> <br/> <br/>
+						Today, we will start from here: <br/><br/>
+
+						3. We first homotope $f$ to map each component of $f^{-1}(\mathscr P)$ onto a component of  $\mathscr P$ homeomorphically, this requires $\pi_1$-injectivity of $f$. <br/>
+
+						4. Therefore, any two components of $f^{-1}(\mathscr P)$ co-bound an annulus if and only if they are inverse images of a single component of $\mathscr P$ as $f$ has homotopy left inverse. We further homotope $f$ to remove annulus, if any. 
+						So, after all these homotopies, we have a one-to-one correspondence between $f^{-1}(\mathscr P)$ and $\mathscr P$, in the sense that $f^{-1}(\mathcal C)$ is a single circle mapped homomorphically onto $\mathcal C$ for each component $\mathcal C$ of $\mathscr P$.
+						
+						<br/> <br/> <br/> <br/>
+						
+						If time permits, we will go through the next few steps:<br/> <br/>
+						5. Cut $S_g$ along $f^{-1}(\mathscr P)$ and then show each complementary component is a pair of pants, and thus the whole problem reduces to proving the topological rigidity of pair of pants.
                  </div>
 
                 <div id="PhoneTable" class="TableBody" style="display:none; text-align:right;">
-				      Topological Rigidity of Closed Surfaces, Outer Automorphism Group, Extended Mapping Class Group
+				      Homotopy equivalence, topological rigidity, annulus embedding, homotopy of a circle embedded on a surface
 				</div>
 	  
 	            <div id="AddressTable" class="TableBody" style="display:none; text-align:center;">
-				     A (short) sketch of the proof (for $g\geq 2$) is in the book "A primer on Mapping Class Groups" written by Benson Farb and Dan Margalit on page 237. 
-					 We'll give the details of their steps and the other two cases, namely $g=0,1$, which we'll consider later.
+				     Nothing!
 				</div>
          </td>
 </tr>
@@ -170,13 +181,13 @@
 
                      <tr >
  
-                           <td style="text-align:left;">  <a href="https://stgsiisc.github.io/topology/26.html" class="button1">Previous Talk</a>
+                           <td style="text-align:left;">  <a href="https://stgsiisc.github.io/topology/27.html" class="button1">Previous Talk</a>
 						   </td>
  
                            <td><a href="#" class="go-top">  <div id="NamesTable" class="TableBody" style="display:none">Abstract Opened</div><div id="PhoneTable" class="TableBody" style="display:none">Keywords Opened </div>   <div id="AddressTable" class="TableBody" style="display:none"> Note Opened</div> Go Top</a>
 						   </td>
 
-                            <td style="text-align:right;"><a  href="https://stgsiisc.github.io/topology/28.html"   class="button1">Next talk</a>
+                            <td style="text-align:right;"><a     class="button1"> $\varnothing$</a>
 							</td>
  
                      </tr> 
