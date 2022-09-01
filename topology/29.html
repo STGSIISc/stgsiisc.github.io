@@ -1,5 +1,5 @@
 <meta charset="UTF-8"/>
-<title>28th Talk (Topology)</title>
+<title>29th Talk (Topology)</title>
 <!---Latest Mathjax LaTex support--->
 <script>
   MathJax = {
@@ -129,33 +129,27 @@
 				
 				
 				<div id="NamesTable" class="TableBody" style="display:none; text-align:left;">
-                       Last time, we started proving the fact that every $g$-genus surface is topologically rigid where $g\geq 2$. The first two steps are given below: <br/><br/>
-
-						1. Decompose $S_g$ into pair of pants using a finite collection $\mathscr P$ of a smoothly embedded simple closed curves, then homotope homotopy equivalence $f\colon S_g\to S_g$ to make it smooth as well as transverse to $\mathscr P$. <br/><br/>
-
-						2. Thus, $f^{-1}(\mathscr P)$ is a finite collection of smoothly embedded closed curves in $S_g$; some of these curves may bound disks in $S_g$, and others represent primitive elements of $\pi_1(S_g)$; next, we homotope $f$ to remove all disk-bounding components of $f^{-1}(\mathscr P)$. 
+                        Recall that the topological rigidity of the closed orientable surface of genus $g(\geq 2)$ requires the topological rigidity of pair of pants. 
+						We will give the sketch of proof of the same thing in a more general setting, namely: 
 						
-						 <br/> <br/> <br/> <br/>
-						Today, we will start from here: <br/><br/>
-
-						3. We first homotope $f$ to map each component of $f^{-1}(\mathscr P)$ onto a component of  $\mathscr P$ homeomorphically, this requires $\pi_1$-injectivity of $f$. <br/><br/>
-
-						4. Therefore, any two components of $f^{-1}(\mathscr P)$ co-bound an annulus if and only if they are inverse images of a single component of $\mathscr P$ as $f$ has homotopy left inverse. We further homotope $f$ to remove all annuli co-bounded by two components of $f^{-1}(\mathscr P)$. <br/> <br/>
-						So, after all these homotopies, we have a one-to-one correspondence between $f^{-1}(\mathscr P)$ and $\mathscr P$, in the sense that $f^{-1}(\mathcal C)$ is a single circle mapped homomorphically onto $\mathcal C$ for each component $\mathcal C$ of $\mathscr P$.
 						
-						<br/> <br/> <br/> <br/>
+						<br/> <br/> <I>
+						If a homotopy equivalence between two compact bordered orientable surfaces induces homeomorphism between their boundaries, 
+						then it is homotopic to a homeomorphism relative to the boundary.
+						</I>
+						<br/> <br/>
+						One application of the topological rigidity of closed orientable surfaces is the following:<br/> <br/> 
 						
-						If time permits, we will go through the next few steps:<br/> <br/>
-						5. Cut $S_g$ along $f^{-1}(\mathscr P)$ and then show each complementary component is a pair of pants, and thus the whole problem reduces to proving the topological rigidity of pair of pants.
-          
+						<I>Any degree one self-map of a closed orientable surface is homotopic to a homeomorphism. 
+						To prove this, we need the Hopficity of the fundamental group of a closed orientable surface.</I>
                  </div>
 
                 <div id="PhoneTable" class="TableBody" style="display:none; text-align:right;">
-				     Homotopy equivalence, topological rigidity, annulus embedding, homotopy of a circle embedded on a surface
+				     Homotopy equivalence, Topological Rigidity of Bordered Surfaces, Hopfian Property of Closed Orientable Surface
 				</div>
 	  
 	            <div id="AddressTable" class="TableBody" style="display:none; text-align:center;">
-				     Nothing!
+				      If time permits, we will try to see the appropriate versions, if any, of these results for non-compact orientable surfaces.
 				</div>
          </td>
 </tr>
@@ -181,7 +175,7 @@
 
                      <tr >
  
-                           <td style="text-align:left;">  <a id="PreviousTalk" href="https://stgsiisc.github.io/topology/27.html" class="button1"></a>
+                           <td style="text-align:left;">  <a id="PreviousTalk" href="https://stgsiisc.github.io/topology/28.html" class="button1"></a>
 						   </td>
  
                            <td>
@@ -193,7 +187,7 @@
 									</a>
 						   </td>
 
-                            <td style="text-align:right;"><a id="NextTalk"  href="https://stgsiisc.github.io/topology/29.html"      class="button1"> </a>
+                            <td style="text-align:right;"><a id="EmptySet"        class="button1"> </a>
 							</td>
  
                      </tr> 
@@ -603,15 +597,15 @@ document.getElementById("EmptySet").innerHTML = "$\\varnothing$";
 <!--- Do NOT the the portions above--->
 
 <script>
-document.getElementById("TalkSerial").innerHTML = '28<sup>th</sup> Talk';
+document.getElementById("TalkSerial").innerHTML = '29<sup>th</sup> Talk';
 </script>
 
 <script>
-document.getElementById("TalkTitle").innerHTML = 'Dehn-Nielsen-Epstein-Baer Theorem (part 3)';
+document.getElementById("TalkTitle").innerHTML = 'Topological Rigidity and Hopfian Property of Closed Orientable Surfaces';
 </script>
 
 <script>
-document.getElementById("TalkDate").innerHTML = '26/08/2022 (Friday)';
+document.getElementById("TalkDate").innerHTML = '02/09/2022 (Friday)';
 </script>
 
 <script>
