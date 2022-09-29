@@ -129,14 +129,30 @@
 				
 				
 				<div id="NamesTable" class="TableBody" style="display:none; text-align:left;">
-                      Let $\Sigma$ be a compact oriented surface.  The Goldman bracket of $\Sigma$ is a Lie algebra structure on the free abelian group generated from the isotopy classes of based loops in $\Sigma$.  
-					  For $\gamma\colon \Bbb S^1 \rightarrow \Sigma$ a continuous function from the based circle, write $[\gamma]$ for the corresponding isotopy class. 
-					  For  $[\gamma_1]$ and $[\gamma_2]$ two such classes, one can always find differentiable representatives $\gamma_1$ and $\gamma_2$ that intersect - if they intersect at some point $p$ transversally. 
-					  Write $\gamma_1 \ast_p \gamma_2$ for the curve obtained by starting at the intersection point $p$, traversing along $\gamma_1$ back to that point and then along $\gamma_2$.
-
+                      Let $\Sigma$ be a connected oriented bordered/unbordered surface. Let $\widehat\pi(\Sigma)$ be the set of all free homotopy classes of loops in $\Sigma$. 
+					  For a closed curve $\alpha\colon \Bbb S^1\to \Sigma$, we write $\text{cls}(\alpha)$ to denote the free homotopy class of $\alpha$. <br/> <br/> 
+					  The Goldman bracket $[-,-]\colon\Bbb Z\big[\widehat\pi(\Sigma)\big]\times\Bbb Z\big[\widehat\pi(\Sigma)\big]\to \Bbb Z\big[\widehat\pi(\Sigma)\big]$ is defined as follows: <br/> <br/>
+					  Let $x,y\in \widehat\pi(\Sigma)$ be represented by two smooth oriented loops $\alpha, \beta\colon \Bbb S^1\to \Sigma$, respectively such that $\alpha \sqcup \beta \colon\Bbb S^1\sqcup \Bbb S^1\to \Sigma$ is a self-transverse immersion without triple points. 
+					  Thus given any point $p\in \alpha\cap \beta$ there is an open negihborhood $U$ of $p$ with $U\cap (\alpha\cup \beta)\cong (\Bbb R\times 0)\cup (0\times \Bbb R)$. 
+					  Let $\alpha*_p\beta$ be the loop obtained by resolving the intersection point $p$ following the rule: 
+					  start from $p$, go around $\alpha$ (follow orientation) until you come back to $p$, then go around $\beta$ (follow orientation), and finally stop at $p$.
+					  <div class="frame1"> </div> 
+					  
+					  Now, define $\varepsilon_p\in \{+1,-1\}$ as follows: Choose $v_p\in T_p \alpha$ and $w_p\in T_p\beta$ which represent directions of $\alpha$ and $\beta$, respectively. 
+					  Now, if the ordered pair $(v_p, w_p)$ represents the orientation of $\Sigma$ at $p$, then let $\varepsilon_p:= 1$, otherwise let $\varepsilon_p:= -1$. 
+					  Now, define $$[x,y]:=\sum_{p\in \alpha\cap \beta}\varepsilon_p\cdot  \text{cls}(\alpha*_p \beta).$$
+					  Goldman, see [Gol86], showed that the bracket is a well-defined bi-linear map that is skew-symmetric and satisfies Jacobi identity. <br/> <br/>
+					  <I>Further, If $\alpha$ is a simple closed curve and $x:= \textup{cls}(\alpha)$, then, for $y\in \widehat \pi(\Sigma)$, $[x, y] = 0$ if and
+						only if $y=\textup{cls}(\beta)$ for a closed curve $\beta$ such that $\beta\cap \alpha=\varnothing$.</I>
+					  <br/> <br/> <br/>
+					  <b style="font-size:35px;">Reference</b> <br/> <br/> <br/>
+					 
+					 [Gol86] &nbsp &nbsp William M. Goldman. <a href="https://doi.org/10.1007/BF01389091" style="color:#ffff80; text-decoration: none;">Invariant functions on Lie groups and Hamiltonian flows of surface group representations.</a> <I>Invent. Math.</I>, 85(2):263-302, 1986. 
+				
  
 
-In this lecture I will discuss how to define this bracket and some properties of this bracket  which I am not going to prove.</div>
+
+                        </div>
 
                 <div id="PhoneTable" class="TableBody" style="display:none; text-align:right;">
 				      Goldman bracket, surfaces, closed curves, lie algebra
@@ -449,7 +465,52 @@ tr {
 
 
 
+<!--- Frames for details of talks--->
+ <style>
+    .frame {
+    overflow-y: auto;
+    border: 5px solid white;
+    height:17.5em;
+    width: 80%;
+    line-height: 2em;
+    padding: 20px;
+    border-radius: 20px;
+    
+    transform: translate(0%, 0%);
+}
 
+.frame::-webkit-scrollbar {
+   color: white; 
+}
+
+.frame::-webkit-scrollbar:vertical {
+    width: 11px;
+}
+
+.frame::-webkit-scrollbar:horizontal {
+    height: 11px;
+}
+
+.frame::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    border: 2px solid white; /* should match background, can't be transparent */
+    background-color: black;
+}
+
+
+
+.frame1 {
+    overflow-y: auto;
+    background: black;
+    background-image: url('resolving.svg');
+    background-position: center; /* Center the image */
+    background-size: contain; /* Resize the background image to cover the entire container*/
+	background-repeat: no-repeat;
+    height: 15em;
+    width: 100%;
+}
+</style>
+<!--- Frames for details of talks--->
 
 
 <!---absract, note and keywords button animation--->
