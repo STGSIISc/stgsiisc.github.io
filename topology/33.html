@@ -1,5 +1,5 @@
 <meta charset="UTF-8"/>
-<title>32nd Talk (Topology)</title>
+<title>33rd Talk (Topology)</title>
 <!---Latest Mathjax LaTex support--->
 <script>
   MathJax = {
@@ -129,25 +129,26 @@
 				
 				
 				<div id="NamesTable" class="TableBody" style="display:none; text-align:left;">
-                      Let $\Sigma$ be a connected oriented bordered/unbordered surface. Let $\widehat\pi(\Sigma)$ be the set of all free homotopy classes of loops in $\Sigma$. 
-					  For a closed curve $\alpha\colon \Bbb S^1\to \Sigma$, we write $\text{cls}(\alpha)$ to denote the free homotopy class of $\alpha$. <br/> <br/> 
-					  The Goldman bracket $[-,-]\colon\Bbb Z\big[\widehat\pi(\Sigma)\big]\times\Bbb Z\big[\widehat\pi(\Sigma)\big]\to \Bbb Z\big[\widehat\pi(\Sigma)\big]$ is defined as follows: <br/> <br/>
-					  Let $x,y\in \widehat\pi(\Sigma)$ be represented by two smooth oriented loops $\alpha, \beta\colon \Bbb S^1\to \Sigma$, respectively, such that $\alpha \sqcup \beta \colon\Bbb S^1\sqcup \Bbb S^1\to \Sigma$ is a self-transverse immersion without triple points. 
-					  Thus given any point $p\in \alpha\cap \beta$ there is an open negihborhood $U$ of $p$ with $U\cap (\alpha\cup \beta)\cong (\Bbb R\times 0)\cup (0\times \Bbb R)$. 
-					  Let $\alpha*_p\beta$ be the loop obtained by resolving the intersection point $p$ following the rule: 
-					  start from $p$, go around $\alpha$ (follow orientation) until you come back to $p$, then go around $\beta$ (follow orientation), and finally stop at $p$.
-					  <div class="frame1"> </div> 
+                      In this talk, we will show how the Goldman bracket (see <a href="https://stgsiisc.github.io/topology/32.html" style="color:#ffff80; text-decoration: none;"> previous talk</a> for definition, etc.) helps to solve the rigidity problem of compact orientable connected bordered surfaces. 
+					  As discussed earlier, every closed, orientable, connected surface is topologically rigid. 
+					  But in the case of compact, orientable, bordered surfaces, this is not true; 
+					  for example, the one-holed torus and three-holed sphere are both homotopy equivalent but are not homeomorphic (as the number of boundary components of these two surfaces is different). 
+					  That means we need to impose some extra conditions on the homotopy equivalence so that it can preserve the number of boundary components, 
+					  and one way to achieve this is to assume that the homotopy equivalence preserves the Goldman bracket.  
+					  More precisely, we prove the following: <br/> <br/>
+
 					  
-					  Now, define $\varepsilon_p\in \{+1,-1\}$ as follows: Choose $v_p\in T_p \alpha$ and $w_p\in T_p\beta$ which represent directions of $\alpha$ and $\beta$, respectively. 
-					  If the ordered pair $(v_p, w_p)$ represents the orientation of $\Sigma$ at $p$, then let $\varepsilon_p:= 1$, otherwise let $\varepsilon_p:= -1$. 
-					  Finally, define $$[x,y]:=\sum_{p\in \alpha\cap \beta}\varepsilon_p\cdot  \text{cls}(\alpha*_p \beta).$$
-					  Goldman, see [Gol86], showed that the bracket is a well-defined bi-linear map that is skew-symmetric and satisfies Jacobi identity. <br/> <br/>
-					  <I>Further, if $\alpha$ is a simple closed curve and $x:= \textup{cls}(\alpha)$, then for $y\in \widehat \pi(\Sigma)$, $[x, y] = 0$ if and
-						only if $y=\textup{cls}(\beta)$ for a closed curve $\beta$ such that $\beta\cap \alpha=\varnothing$.</I>
+					 A homotopy equivalence $f \colon \Sigma'\to \Sigma$ between compact, connected,
+                     oriented bordered surfaces is homotopic to a homeomorphism if and only if it commutes with the Goldman bracket, 
+					 i.e., for all $x,y\in \Bbb Z\big[\widehat\pi(\Sigma')\big]$, we have,
+                     $$\big[f_*(x), f_*(y)\big] = f_*\big([x, y]\big),$$
+                     where $f_*\colon \Bbb Z\big[\widehat\pi(\Sigma')\big]\to \Bbb Z\big[\widehat\pi(\Sigma)\big]$ is the induced function given by 
+					 $$f_*\left(\sum_\textup{finite} n_i\cdot \textup{cls}(\alpha_i)\right)=\sum_\textup{finite} n_i\cdot \textup{cls}(f\alpha_i).$$ 
 					  <br/> <br/> <br/>
 					  <b style="font-size:35px;">Reference</b> <br/> <br/> <br/>
 					 
-					 [Gol86] &nbsp &nbsp William M. Goldman. <a href="https://doi.org/10.1007/BF01389091" style="color:#ffff80; text-decoration: none;">Invariant functions on Lie groups and Hamiltonian flows of surface group representations.</a> <I>Invent. Math.</I>, 85(2):263-302, 1986. 
+					 [Gad11] &nbsp &nbsp Siddhartha Gadgil. <a href="https://doi.org/10.1007/BF01389091" style="color:#ffff80; text-decoration: none;">
+					 The Goldman bracket characterizes homeomorphisms.</a> <I>C. R. Math. Acad. Sci. Paris</I>, 349(23-24):1269-1272, 2011. 
 				
  
 
@@ -185,7 +186,7 @@
 
                      <tr >
  
-                           <td style="text-align:left;">  <a id="PreviousTalk" href="https://stgsiisc.github.io/topology/31.html" class="button1"></a>
+                           <td style="text-align:left;">  <a id="PreviousTalk" href="https://stgsiisc.github.io/topology/32.html" class="button1"></a>
 						   </td>
  
                            <td>
@@ -197,7 +198,7 @@
 									</a>
 						   </td>
 
-                            <td style="text-align:right;"><a id="random"   href="https://stgsiisc.github.io/topology/33.html"    class="button1"> </a>
+                            <td style="text-align:right;"><a id="random"       class="button1"> </a>
 							</td>
  
                      </tr> 
@@ -632,24 +633,24 @@ document.getElementById("Time").innerHTML = 'Time';
 document.getElementById("PreviousTalk").innerHTML = 'Previous Talk';
 </script>
 <script>
-document.getElementById("random").innerHTML = 'Next Talk'; <!---- Either consider '$\\varnothing$' or 'Next Talk'---->
+document.getElementById("random").innerHTML = '$\\varnothing$'; <!---- Either consider '$\\varnothing$' or 'Next Talk'---->
 </script>
 <!--- Do NOT the the portions above--->
 
 <script>
-document.getElementById("TalkSerial").innerHTML = '32<sup>nd</sup> Talk';
+document.getElementById("TalkSerial").innerHTML = '33<sup>rd</sup> Talk';
 </script>
 
 <script>
-document.getElementById("TalkTitle").innerHTML = 'The Goldman Bracket on a surface';
+document.getElementById("TalkTitle").innerHTML = 'The Goldman Bracket Characterizes Homeomorphisms';
 </script>
 
 <script>
-document.getElementById("TalkDate").innerHTML = '23/09/2022 (Friday)';
+document.getElementById("TalkDate").innerHTML = '30/09/2022 (Friday)';
 </script>
 
 <script>
-document.getElementById("TalkSpeaker").innerHTML = 'Gobinda Sau';
+document.getElementById("TalkSpeaker").innerHTML = 'Sumanta Das';
 </script>
 
 <script>
