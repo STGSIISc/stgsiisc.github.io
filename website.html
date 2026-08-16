@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>About STGS Website</title>
 
-    <!-- Clean Google Fonts (Open Sans for sans-serif, Crimson Text for serif) -->
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+    <!-- Clean Academic Fonts: Cinzel (Heading) and Crimson Pro (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Crimson+Pro:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
 
     <!-- Latest MathJax LaTeX support -->
     <script>
@@ -22,1677 +25,539 @@
     <!-- jQuery for GoTop Button -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <!--[if lt IE 9]>
-        <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+    <style>
+        /* === Base Minimalist Theme === */
+        :root {
+            --bg-color: #0d0e12;
+            --text-main: #e2e8f0;
+            --text-muted: #94a3b8;
+            --accent: #00d7c3;
+            --accent-hover: #ffff80;
+            --border-color: rgba(255, 255, 255, 0.1);
+            --card-bg: rgba(255, 255, 255, 0.03);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Crimson Pro', serif;
+            font-size: 1.25rem;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-hover);
+        }
+
+        /* === Fixed Header === */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 80px;
+            background-color: rgba(13, 14, 18, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            z-index: 1000;
+        }
+
+        .header h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #f1f5f9;
+            letter-spacing: 1px;
+        }
+
+        /* Home Button */
+        .button1 {
+            display: inline-block;
+            height: 40px;
+            width: 40px;
+            background-color: transparent;
+            background-image: url('homeicon.svg');
+            background-size: 24px;
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .button1:hover {
+            border-color: var(--accent-hover);
+            box-shadow: 0 0 15px rgba(255, 255, 128, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* === Main Layout === */
+        .container {
+            max-width: 900px;
+            margin: 120px auto 60px auto;
+            padding: 0 20px;
+        }
+
+        .intro-text {
+            text-align: justify;
+            margin-bottom: 2rem;
+            color: #cbd5e1;
+        }
+
+        .intro-text p {
+            margin-bottom: 1.5rem;
+        }
+
+        /* === Reference Tables === */
+        .reference-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 3rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .reference-table td {
+            padding: 1.2rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            vertical-align: top;
+        }
+
+        .reference-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .reference-table td:first-child {
+            width: 30%;
+            font-weight: 600;
+            color: #f8fafc;
+            border-right: 1px solid var(--border-color);
+            background-color: rgba(255, 255, 255, 0.02);
+        }
+
+        .reference-table td:last-child {
+            width: 70%;
+            word-break: break-word;
+        }
+
+        /* Standalone Image References */
+        .image-ref {
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--border-color);
+            background-color: var(--card-bg);
+            text-align: justify;
+            border-radius: 8px;
+        }
+
+        /* === Go Top Button === */
+        .go-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--card-bg);
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: none;
+            z-index: 99;
+            transition: all 0.3s ease;
+            font-family: 'Cinzel', serif;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        .go-top:hover {
+            color: var(--accent);
+            border-color: var(--accent);
+            background-color: rgba(0, 215, 195, 0.1);
+        }
+    </style>
 </head>
 <body>
 
+    <!-- Header Section -->
+    <header class="header">
+        <h1>About STGS Website</h1>
+        <a href="https://stgsiisc.github.io/" class="button1" title="Return to Homepage"></a>
+    </header>
 
-<div class="header">
-
-         
-         <h1 style="position: absolute;
-               left: 60px; top: 0px;"> 
-               
-               
-                  <a  id="AboutSTGSWebsite"  style="color:#00d7c3; text-decoration: none; font-family: 'Nosifer', cursive;"></a>
-               
-               
-          </h1> 
-  
-  
-         <div class="topright">
-  
-                <a href="https://stgsiisc.github.io/"                      class="button1"></a>
-           
-         </div>
-  
-  
-  
-</div>
-
-
-<!---Starting of the content section--->
-
-
-
-
-             
-             
-             
-    
-       
-
-
-<table> 
-		<tr>
-		<td style="text-align:left; font-family: 'Crimson Text', serif; font-size:30px">
-		
-		</td>
-		</tr>
-		
-		<tr>
-		<td style="text-align:left; font-family: 'Crimson Text', serif; font-size:30px">
-			 <div style="text-align: justify; text-justify: inter-word;"><a id="1"> </a> </div>
-		</td>
-		</tr>
-		     
-		<tr>
-		<td style="text-align:left; font-family: 'Crimson Text', serif; font-size:30px">
-		     <div style="text-align: justify; text-justify: inter-word;"><a id="2"> </a> </div>
-		</td>
-		</tr>
+    <!-- Main Content -->
+    <main class="container">
         
-		<tr>
-		<td style="text-align:left; font-family: 'Crimson Text', serif; font-size:30px">
-		
-		</td>
-		</tr>
-		
-		<tr>
-		<td style="text-align:left; font-family: 'Crimson Text', serif; font-size:30px">
-		
-		</td>
-		</tr>
-
-</table>
-
-
-<div style="padding:50px 100px 50px 100px">
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Draggable div using jQuery 
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px;word-break:break-all;"> 
-		<a href="https://stackoverflow.com/a/70992884/13805201"style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/a/70992884/13805201</a> (Answer)<br/>
-		<a href="https://stackoverflow.com/q/70992838" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/q/70992838</a> (Question)
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Making the draggable dropdown menu on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Authors of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://stackoverflow.com/users/15032688/sercan" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/users/15032688/sercan</a> (Answerer)<br/>
-		<a href="https://stackoverflow.com/users/18122044/mame1" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/users/18122044/mame1</a> (Questioner)
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://creativecommons.org/licenses/by-sa/4.0/"style="color:#ffff80; text-decoration:none;">CC BY-SA 4.0</a>&nbsp (See <a href="https://stackoverflow.com/help/licensing" style="color:#ffff80; text-decoration:none;">Stack Overflow Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Close all other divs when one button is clicked
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://stackoverflow.com/a/55800939/13805201"style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/a/55800939/13805201</a> (Answer)<br/>
-		<a href="https://stackoverflow.com/q/55800589/13805201" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/q/55800589/13805201</a> (Question)
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Making multiple "Read-more" type buttons sharing the same display on the details of each talk
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Authors of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://stackoverflow.com/users/1491895/barmar" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/users/1491895/barmar</a> (Answerer)<br/>
-		<a href="https://stackoverflow.com/users/11396133/codebreaker" style="color:#ffff80; text-decoration:none;">https://stackoverflow.com/users/11396133/codebreaker</a> (Questioner)
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://creativecommons.org/licenses/by-sa/4.0/"style="color:#ffff80; text-decoration:none;">CC BY-SA 4.0</a> &nbsp (See <a href="https://stackoverflow.com/help/licensing" style="color:#ffff80; text-decoration:none;">Stack Overflow Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Zigzag dropdown menu concept
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/catalinred/pen/kPEXJO"style="color:#ffff80; text-decoration:none;">https://codepen.io/catalinred/pen/kPEXJO</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Making zigzag dropdown menu on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/catalinred" style="color:#ffff80; text-decoration:none;">https://codepen.io/catalinred</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Text Animation
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/ziyovuddin/pen/JjNvVYW"style="color:#ffff80; text-decoration:none;">https://codepen.io/ziyovuddin/pen/JjNvVYW</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating the word &#10077; STUDENTS' &#10078; on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/ziyovuddin" style="color:#ffff80; text-decoration:none;">https://codepen.io/ziyovuddin</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		CSS Glitch Effect
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/nirazanbasnet/pen/RzOwdg"style="color:#ffff80; text-decoration:none;">https://codepen.io/nirazanbasnet/pen/RzOwdg</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating the words &#10077; TOPOLOGY & GEOMETRY &#10078; on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/nirazanbasnet" style="color:#ffff80; text-decoration:none;">https://codepen.io/nirazanbasnet</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Flip text animation
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/WaadAlnwar/pen/dyXGNwM"style="color:#ffff80; text-decoration:none;">https://codepen.io/WaadAlnwar/pen/dyXGNwM</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating the word &#10077; SEMINARS &#10078; on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/WaadAlnwar" style="color:#ffff80; text-decoration:none;">https://codepen.io/WaadAlnwar</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Smoky Text
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/bennettfeely/pen/nZXRyJ"style="color:#ffff80; text-decoration:none;">https://codepen.io/bennettfeely/pen/nZXRyJ</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating the Gauss-Bonnet Theorem on the <a href="https://stgsiisc.github.io/" style="color:#ffff80; text-decoration:none;">homepage</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/bennettfeely" style="color:#ffff80; text-decoration:none;">https://codepen.io/bennettfeely</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		CSS Neon Sign
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/ananyaneogi/pen/Bgozrz"style="color:#ffff80; text-decoration:none;">https://codepen.io/ananyaneogi/pen/Bgozrz</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating the words <a href="https://stgsiisc.github.io/geometry.html" style="color:#ffff80; text-decoration:none;">&#10077; STGS Geometry Module &#10078;</a> and <a href="https://stgsiisc.github.io/topology.html" style="color:#ffff80; text-decoration:none;">&#10077; STGS Topology Module &#10078;</a> </td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/ananyaneogi" style="color:#ffff80; text-decoration:none;">https://codepen.io/ananyaneogi</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		CSS button hover effects
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/woolandcotton/pen/mBmLwq"style="color:#ffff80; text-decoration:none;">https://codepen.io/woolandcotton/pen/mBmLwq</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Animating a lot of buttons here and there
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/woolandcotton" style="color:#ffff80; text-decoration:none;">https://codepen.io/woolandcotton</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Sticky Back to Top Button
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/yying6/pen/nrjJBE"style="color:#ffff80; text-decoration:none;">https://codepen.io/yying6/pen/nrjJBE</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Making Go Top buttons here and there
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/yying6" style="color:#ffff80; text-decoration:none;">https://codepen.io/yying6</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-	    Type Writer - JS
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/feyinway/pen/prGrJq"style="color:#ffff80; text-decoration:none;">https://codepen.io/feyinway/pen/prGrJq</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://stgsiisc.github.io/contact.html" style="color:#ffff80; text-decoration:none;">Contact Page</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/feyinway" style="color:#ffff80; text-decoration:none;">https://codepen.io/feyinway</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-         Full Page Scroll With Page Navigation.
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/juuggo/pen/KbLBZe"style="color:#ffff80; text-decoration:none;">https://codepen.io/juuggo/pen/KbLBZe</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://stgsiisc.github.io/stgs.html" style="color:#ffff80; text-decoration:none;">About STGS</a>
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/juuggo" style="color:#ffff80; text-decoration:none;">https://codepen.io/juuggo</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-<table> <tr> <td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; text-align: justify; text-justify: inter-word;"> The figure in the upper-left corner is the one-holed torus,
- which is also the Seifert surface of the Trefoil knot, 
- and the idea of this drawing is inspired by the 
- <a href="https://www.win.tue.nl/~vanwijk/seifertview/download_seifertview.htm" style="color:#ffff80; text-decoration:none;">SeifertView app (Jarke J. van Wijk, Technische Universiteit Eindhoven)</a>,
- i.e., at first, it was created in 
- <a href="https://www.win.tue.nl/~vanwijk/seifertview/download_seifertview.htm" style="color:#ffff80; text-decoration:none;">SeifertView app </a>,
- and later it was drawn (after several modifications, to create .svg extension)
- using <a href="https://inkscape.org/" style="color:#ffff80; text-decoration:none;">Inkscape app</a>.</td></tr></table>
- 
- 
- 
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-<table> <tr> <td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; text-align: justify; text-justify: inter-word;"> The figure in the upper-right corner is the Hopf fibration,
- and the idea of this drawing is inspired by the Figure 1 of the paper
- <a href="https://arxiv.org/pdf/quant-ph/0310053.pdf" style="color:#ffff80; text-decoration:none;">Two and Three Qubits Geometry and Hopf Fibrations</a>,
- and then it was redrawn (after several modifications, to create .svg extension)
- using <a href="https://inkscape.org/" style="color:#ffff80; text-decoration:none;">Inkscape app</a>.</td></tr></table>
- 
- 
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br/><br/><br/><br/><br/><br/><br/><br/><br/>
-
-
-
-<table style="border: 0px solid white;">
-
-
-<tr >
-
-		<td style=" width: 350px; border: 2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Code Name 
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-         Slider with Ripple Effect v1.1
-		</td>
-
-</tr>  
-
-
-<tr >
-
-		<td style=" width: 350px;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Source of the code
-		</td>
- 
-		<td style="border: 2px solid white; font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/aspeddro/pen/dMxyde"style="color:#ffff80; text-decoration:none;">https://codepen.io/aspeddro/pen/dMxyde</a> 
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Use of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://stgsiisc.github.io/stgs.html" style="color:#ffff80; text-decoration:none;">About STGS</a> (It has been used before, but has no current use.)
-		</td>
-
-</tr> 
-
-
-<tr >
-
-		<td style=" width: 350px; font-family: 'Crimson Text', serif; font-size:30px;"> 
-		Author of the code
-		</td>
- 
-		<td style="border:2px solid white;font-family: 'Crimson Text', serif; font-size:30px; word-break: break-all;"> 
-		<a href="https://codepen.io/aspeddro" style="color:#ffff80; text-decoration:none;">https://codepen.io/aspeddro</a>
-		</td>
-
-</tr> 
-
-<tr >
-
-		<td style=" width: 350px; border:2px solid grey;font-family: 'Crimson Text', serif; font-size:30px;"> 
-		License of the code
-		</td>
- 
-		<td style="font-family: 'Crimson Text', serif; font-size:30px;"> 
-		<a href="https://opensource.org/licenses/MIT"style="color:#ffff80; text-decoration:none;">MIT Licensed</a> &nbsp 
-		(See <a href="https://blog.codepen.io/documentation/licensing/#if-your-pen-is-public-0"style="color:#ffff80; text-decoration:none;">CodePen Licensing</a>)
-		</td>
-
-</tr> 
-
-
-</table>
- 
-
-</div>
-
-
-  
-
-
-
-
-
-<!---Positioning of GoTop button--->
-<footer>
-	<a href="#" class="go-top" style="color:yellow">Go Top</a>
-</footer>
-
-<!---Positioning of GoTop button--->
-
-
-
-
-
-
-
-
-
-
-
-<!---Ending of the content section--->
-
-
+        <section class="intro-text">
+            <p>This page cites all those works that have been used after suitable modifications to build the non-commercial, non-profitable website <a href="https://stgsiisc.github.io/">https://stgsiisc.github.io/</a> hosted on <a href="https://github.com/STGSIISc/stgsiisc.github.io">GitHub</a>. The exact purpose of this website is to record details of different talks given by a group of mathematics students interested in topology and geometry, nothing more than that.</p>
+            
+            <p>Hi, I am Sumanta, a Ph.D. student of the IISc Mathematics Department interested in topology. I designed/developed this website. Also, I am currently maintaining it. You can mail me at <a href="mailto:sumantad030@gmail.com">sumantad030@gmail.com</a> for any non-mathematical query related to the license, copyright, design, etc. I would like to thank Ajay Nair, Kartick Ghosh, Sivaram P., and Gobinda Sau for their constant support in making this website.</p>
+        </section>
+
+        <!-- Code Citations -->
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Draggable div using jQuery</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td>
+                    <a href="https://stackoverflow.com/a/70992884/13805201">https://stackoverflow.com/a/70992884/13805201</a> (Answer)<br/>
+                    <a href="https://stackoverflow.com/q/70992838">https://stackoverflow.com/q/70992838</a> (Question)
+                </td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Making the draggable dropdown menu on the homepage</td>
+            </tr>
+            <tr>
+                <td>Authors of the code</td>
+                <td>
+                    <a href="https://stackoverflow.com/users/15032688/sercan">sercan</a> (Answerer)<br/>
+                    <a href="https://stackoverflow.com/users/18122044/mame1">mame1</a> (Questioner)
+                </td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a> (See Stack Overflow Licensing)</td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Close all other divs when one button is clicked</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td>
+                    <a href="https://stackoverflow.com/a/55800939/13805201">https://stackoverflow.com/a/55800939/13805201</a> (Answer)<br/>
+                    <a href="https://stackoverflow.com/q/55800589/13805201">https://stackoverflow.com/q/55800589/13805201</a> (Question)
+                </td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Making multiple "Read-more" type buttons sharing the same display on the details of each talk</td>
+            </tr>
+            <tr>
+                <td>Authors of the code</td>
+                <td>
+                    <a href="https://stackoverflow.com/users/1491895/barmar">barmar</a> (Answerer)<br/>
+                    <a href="https://stackoverflow.com/users/11396133/codebreaker">codebreaker</a> (Questioner)
+                </td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Zigzag dropdown menu concept</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/catalinred/pen/kPEXJO">https://codepen.io/catalinred/pen/kPEXJO</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Making zigzag dropdown menu on the homepage</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/catalinred">catalinred</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Text Animation</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/ziyovuddin/pen/JjNvVYW">https://codepen.io/ziyovuddin/pen/JjNvVYW</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating the word "STUDENTS'" on the homepage</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/ziyovuddin">ziyovuddin</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>CSS Glitch Effect</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/nirazanbasnet/pen/RzOwdg">https://codepen.io/nirazanbasnet/pen/RzOwdg</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating the words "TOPOLOGY & GEOMETRY" on the homepage</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/nirazanbasnet">nirazanbasnet</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Flip text animation</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/WaadAlnwar/pen/dyXGNwM">https://codepen.io/WaadAlnwar/pen/dyXGNwM</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating the word "SEMINARS" on the homepage</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/WaadAlnwar">WaadAlnwar</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Smoky Text</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/bennettfeely/pen/nZXRyJ">https://codepen.io/bennettfeely/pen/nZXRyJ</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating the Gauss-Bonnet Theorem on the homepage</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/bennettfeely">bennettfeely</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>CSS Neon Sign</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/ananyaneogi/pen/Bgozrz">https://codepen.io/ananyaneogi/pen/Bgozrz</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating the links to STGS Geometry Module and STGS Topology Module</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/ananyaneogi">ananyaneogi</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>CSS button hover effects</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/woolandcotton/pen/mBmLwq">https://codepen.io/woolandcotton/pen/mBmLwq</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Animating miscellaneous buttons on the site</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/woolandcotton">woolandcotton</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Sticky Back to Top Button</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/yying6/pen/nrjJBE">https://codepen.io/yying6/pen/nrjJBE</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Making Go Top buttons</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/yying6">yying6</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Type Writer - JS</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/feyinway/pen/prGrJq">https://codepen.io/feyinway/pen/prGrJq</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>Contact Page</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/feyinway">feyinway</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Full Page Scroll With Page Navigation</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/juuggo/pen/KbLBZe">https://codepen.io/juuggo/pen/KbLBZe</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>About STGS Page</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/juuggo">juuggo</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <table class="reference-table">
+            <tr>
+                <td>Code Name</td>
+                <td>Slider with Ripple Effect v1.1</td>
+            </tr>
+            <tr>
+                <td>Source of the code</td>
+                <td><a href="https://codepen.io/aspeddro/pen/dMxyde">https://codepen.io/aspeddro/pen/dMxyde</a></td>
+            </tr>
+            <tr>
+                <td>Use of the code</td>
+                <td>About STGS (Historical Use)</td>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td><a href="https://codepen.io/aspeddro">aspeddro</a></td>
+            </tr>
+            <tr>
+                <td>License</td>
+                <td><a href="https://opensource.org/licenses/MIT">MIT Licensed</a></td>
+            </tr>
+        </table>
+
+        <!-- Image Citations -->
+        <div class="image-ref">
+            <p>The figure in the upper-left corner is the one-holed torus, which is also the Seifert surface of the Trefoil knot. The idea for this drawing is inspired by the <a href="https://www.win.tue.nl/~vanwijk/seifertview/download_seifertview.htm">SeifertView app (Jarke J. van Wijk, Technische Universiteit Eindhoven)</a>. It was initially created in the SeifertView app and later drawn (after several modifications to create the .svg extension) using the <a href="https://inkscape.org/">Inkscape app</a>.</p>
+        </div>
+
+        <div class="image-ref">
+            <p>The figure in the upper-right corner is the Hopf fibration. The idea for this drawing is inspired by Figure 1 of the paper <a href="https://arxiv.org/pdf/quant-ph/0310053.pdf">Two and Three Qubits Geometry and Hopf Fibrations</a>, and was redrawn (after several modifications to create the .svg extension) using the <a href="https://inkscape.org/">Inkscape app</a>.</p>
+        </div>
+
+    </main>
+
+    <!-- Go Top Button -->
+    <a href="#" class="go-top">Go Top</a>
+
+    <!-- Scroll Logic -->
+    <script>
+        $(document).ready(function() {
+            // Show or hide the sticky footer button
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 200) {
+                    $('.go-top').fadeIn(200);
+                } else {
+                    $('.go-top').fadeOut(200);
+                }
+            });
+            
+            // Animate the scroll to top
+            $('.go-top').click(function(event) {
+                event.preventDefault();
+                $('html, body').animate({scrollTop: 0}, 300);
+            });
+        }); 
+    </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-<!----For sticky header, body of homepage, scrollbar---->
-
-<style>
-
-@import 'https://fonts.googleapis.com/css?family=Prompt:400,700';
-
-body {
-  font-size: 20px;
-  margin-top:30px;
-  background: black;
-  background-image: url('skull.svg');
-  background-position: center; /* Center the image */
-  background-size: cover; /* Resize the background image to cover the entire container*/
-  top: 0;
-  left: 0;
-  position: center;
-  height: 100%;
-  padding: 70px 1px 70px 1px;
-  font-family: 'Prompt', sans-serif;
-  overflow-x: auto;
-  overflow-y: auto;
-}
-
-.header {
-  background: black;
-  position: fixed;
-  top: 0;
-  right: 0px;
-  left: 0;
-  height: 20px;
-  width: 100%;
-  border-bottom: 5px solid black;
-  padding: 20px 10px 70px 10px;
-  z-index:1;
-}
-
-::-webkit-scrollbar {
-display:none;
- }
-
-</style>
-
-<!----For sticky header, body of homepage, scrollbar---->
-
-
-
-<!----Animation of homepage name---->
-
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Rampart+One&display=swap');
-
-
-h11 {
-
-  
-/*  color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  font-family: 'Rampart One', cursive;
- 
-  animation: blink 12s infinite;
-  -webkit-animation: blink 12s infinite;
-}
-
-body {
-  
-}
-
-@-webkit-keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  }
-}
-
-@keyframes blink {
-  20%,
-  24%,
-  55% {
-    color: #111;
-    text-shadow: none;
-  }
-
-  0%,
-  19%,
-  21%,
-  23%,
-  25%,
-  54%,
-  56%,
-  100% {
-/*     color: white;
-    text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 25px #D3D3D3,
-      0 0 20px #505050, 0 0 30px #404040, 0 0 80px #303030, 0 0 80px #202020; */
-  text-shadow: 0 0 5px #F5F5F5, 0 0 15px #DCDCDC, 0 0 20px #505050, 0 0 40px #404040, 0 0 60px #303030, 0 0 10px #202020, 0 0 98px #101010;
-    color: white;
-  }
-}
-
-</style>
-
-<!----Animation of homepage name---->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!--- to give position homepage button--->
-
-
-<style>
-.container {
-  position: relative;
-}
-
-.topright {
-  position: absolute;
-  top: 25px;
-  right: 60px;
-  font-size: 55px;
-  color: white;
-  font-family: 'Brush Script MT', cursive, monospace;
-  
-}
-
-</style>
-
-<!--- to give position homepage button--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---homepage button animation--->
-
-<style>
-
-.button1 {
- -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
-  height:40px;
-  width:40px;
-  font-family: 'Prompt', sans-serif;
-  border: none;
-  background-image: url('homeicon.svg');
-  background-size:contain;
-  background-repeat: no-repeat;
-  background-position:center;
-  color: white;
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 22px;
-  text-decoration: none;
-}
-
-.button1:hover {
-  box-shadow: 0px 0px 60px 10px rgba(255, 255, 255, 0.9);
-  border: 3px solid black;
-}
-
-</style>
-
-<!---homepage button animation--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---Style for tables--->
-
-<style>
-table {
-  table-layout: fixed;
-  width:100%;
-  margin:0;
-  border-collapse: collapse;
-  border: 0px solid white;
- }
-
-th{
-  padding: .5em 1em .5em 1em;
-  word-break:keep-all;
-  border: solid 0px white;
-  background-color: transparent;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-
-
-td,
-tr {
-  padding: .5em 1em .5em 1em;
-  word-break:keep-all;
-  font: 110%/1.4 system-ui;
-  border: solid 0px white;
-  background-color: transparent;
-  text-align: center;
-  color: white;
-  font-size: 20px;
-}
-
-
-thead {
-  position: sticky;
-  top: 115px;
-  background: -webkit-linear-gradient(#fff, #000);
-  z-index: 1;
-}
-
-</style>
-
-<!---Style for tables--->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!---Animation on clicking the each title--->
-
-<style>a.button {
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;right: 20px;
-    font-family: 'Prompt', sans-serif;
-    text-decoration: none;
-	}
-	
-	
-.button {
-  background-color: transparent;
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-  color: white;
-}
-
-
-.button:hover {
-  box-shadow: 0 0 0px 0 #fff inset, 0px 0px 15px 15px #fff;
-  
-}</style>
-
-<!---Animation on clicking the each title--->
-
-
-
-<!--- Go Top Button--->
-
-
-<style>
-
-
-/* https://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-.go-top {
-	position: fixed;
-	bottom: .1em;
-    right:.1em;
-    text-decoration: none;
-	background-color: black;
-	font-size: 15px;
-	padding: 1em;
-	display: none;
-	z-index;1;
-}
-
-.go-top:hover {
-	background-color: black;
-	text-decoration: none;
-} 
-
-
-</style>
-
-
-
-
-<script>
-
-   $(document).ready(function() {
-			// Show or hide the sticky footer button
-			$(window).scroll(function() {
-				if ($(this).scrollTop() > 200) {
-					$('.go-top').fadeIn(200);
-				} else {
-					$('.go-top').fadeOut(200);
-				}
-			});
-			
-			// Animate the scroll to top
-			$('.go-top').click(function(event) {
-				event.preventDefault();
-				
-				$('html, body').animate({scrollTop: 0}, 300);
-			})
-		}); 
-</script>
-
-<!--- Go Top Button--->
-
-
-
-
-
-
-
-
-
-		
-
-
-
-
-
-
-<!--- Lodaing later--->
-<!---Homepage, Date, Title, Speaker, KeyWords, Go Top--->
-<script>
-document.getElementById("AboutSTGSWebsite").innerHTML = 'About STGS Website';
-</script>
-
-
-<script> 
-document.getElementById("1").innerHTML = "This page cites all those works that have been used after suitable modifications to build the non-commercial, non-profitable website <a href='https://stgsiisc.github.io/' style='color:#00d7c3; text-decoration:none;'>https://stgsiisc.github.io/</a> hosted on <a href='https://github.com/STGSIISc/stgsiisc.github.io' style='color:#00d7c3; text-decoration:none;'>GitHub</a>. The exact purpose of this website is to record details of different talks given by a group of mathematics students interested in topology and geometry, nothing more than that.";
-</script>
-
-<script> 
-document.getElementById("2").innerHTML = "Hi, I am Sumanta, a Ph.D. student of the IISc Mathematics Department interested in topology. I designed/developed this website. Also, I am currently maintaining it. You can mail me at <a href='mailto:sumantad030@gmail.com' style='color:#00d7c3; text-decoration:none;'>sumantad030@gmail.com</a> for any non-mathematical query related to the license, copyright, design, etc. I would like to thank Ajay Nair, Kartick Ghosh, Sivaram P., and Gobinda Sau for their constant support in making this website.";
-</script>
-
-
-
-
-<!---
-<script>
-document.getElementById("Home").innerHTML = 'Homepage';
-</script>
-
---->
-
