@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STGS IISc</title>
+
+  <!-- Google Fonts: Refined Serif + Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=IBM+Plex+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --text-primary: #111111;
+      --text-secondary: #555555;
+      --border-color: rgba(17, 17, 17, 0.15);
+      --border-hover: rgba(17, 17, 17, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      min-height: 100vh;
+      background: transparent;
+      color: var(--text-primary);
+      font-family: 'IBM Plex Sans', system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Bar — Top Right: IISc Bangalore */
+    header {
+      width: 100%;
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 2.25rem 2rem;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+    }
+
+    .iisc-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      text-decoration: none;
+      padding-bottom: 0.2rem;
+      border-bottom: 1px solid var(--border-color);
+      transition: border-color 0.25s ease;
+    }
+
+    .iisc-link:hover {
+      border-color: var(--text-primary);
+    }
+
+    /* Main Content */
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      max-width: 860px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 2rem 5rem;
+    }
+
+    h1 {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(2.75rem, 7.5vw, 5.5rem);
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin-bottom: 3.5rem;
+    }
+
+    /* Minimalist Card Grid */
+    .links-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.75rem;
+      width: 100%;
+      max-width: 760px;
+    }
+
+    .seminar-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      text-align: left;
+      padding: 2rem;
+      background: transparent;
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text-primary);
+      transition: border-color 0.25s ease, transform 0.25s ease;
+    }
+
+    .seminar-card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+    }
+
+    .era-tag {
+      display: inline-block;
+      font-size: 0.6875rem;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--text-secondary);
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 2.25rem;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 1.1;
+      margin-bottom: 0.65rem;
+      color: var(--text-primary);
+    }
+
+    .card-desc {
+      font-size: 0.9375rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: var(--text-secondary);
+      margin-bottom: 1.75rem;
+    }
+
+    .card-footer {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      letter-spacing: 0.02em;
+      color: var(--text-primary);
+      margin-top: auto;
+    }
+
+    .arrow {
+      display: inline-block;
+      transition: transform 0.25s ease;
+    }
+
+    .seminar-card:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    @media (max-width: 640px) {
+      .links-container {
+        grid-template-columns: 1fr;
+      }
+      header {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Right Corner: IISc Bangalore -->
+  <header>
+    <a href="https://math.iisc.ac.in" target="_blank" rel="noopener noreferrer" class="iisc-link">
+      Department of Mathematics &middot; IISc Bangalore
+    </a>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>Students' Topology <em>&amp;</em> Geometry Seminars</h1>
+
+    <div class="links-container">
+      <!-- CARD 1: Talks Before 2025 (Jan 2022 – Jan 2024) -->
+      <!-- UPDATE LINK 1 HERE -->
+      <a href="old.html" class="seminar-card">
+        <div>
+          <span class="era-tag">ARCHIVE &bull; JAN 2022 &ndash; JAN 2024</span>
+          <h2 class="card-title">Talks Before 2025</h2>
+          <p class="card-desc">
+            Browse the complete archive of past seminar schedules, abstracts, and speaker records from January 2022 to January 2024.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span>View Past Archive</span>
+          <span class="arrow">&rarr;</span>
+        </div>
+      </a>
+
+      <!-- CARD 2: Talks After 2025 -->
+      <!-- UPDATE LINK 2 HERE -->
+      <a href="new.html" class="seminar-card">
+        <div>
+          <span class="era-tag">CURRENT &bull; 2025 ONWARDS</span>
+          <h2 class="card-title">Talks After 2025</h2>
+          <p class="card-desc">
+            Explore current and upcoming seminar schedules, abstracts, and speaker records from 2025 onwards.
+          </p>
+        </div>
+        <div class="card-footer">
+          <span>Explore Current Talks</span>
+          <span class="arrow">&rarr;</span>
+        </div>
+      </a>
+    </div>
+  </main>
+
+</body>
+</html>
